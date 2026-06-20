@@ -1,6 +1,6 @@
 import { useTheme } from '../dist/ThemeContext';
 import { useCart } from '../dist/CartContext';
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Button, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import productsData from '../lib/procuct.json';
 
