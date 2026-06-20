@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Matte Liquid Lipstick - Bold Red",
+    "price": 499,
+    "description": "Long-lasting, smudge-proof liquid matte lipstick with a highly pigmented formula.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.6
+  },
+  {
+    "id": 2,
+    "title": "Gel Finish Nail Paint - Pastel Pink",
+    "price": 199,
+    "description": "High-shine, chip-resistant nail lacquer that gives a professional salon-like gel finish.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.3
+  },
+  {
+    "id": 3,
+    "title": "Hydrating Liquid Foundation - Fair Ivory",
+    "price": 799,
+    "description": "Lightweight, full-coverage foundation with SPF 15 that blends seamlessly for 24-hour wear.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.5
+  },
+  {
+    "id": 4,
+    "title": "24hr Matte Finish Nail Enamel - Crimson Red",
+    "price": 249,
+    "description": "Quick-drying matte nail paint featuring an extra-wide brush for easy application.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1632345031435-8797b2d58045?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.4
+  },
+  {
+    "id": 5,
+    "title": "Velvet Matte Lipstick - Nude Nuance",
+    "price": 399,
+    "description": "Enriched with Vitamin E and Jojoba oil to keep your lips moisturized all day.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.7
+  },
+  {
+    "id": 6,
+    "title": "Waterproof Gel Eyeliner & Kajal Duo",
+    "price": 299,
+    "description": "Intense black pigment that stays waterproof and smudge-proof for up to 16 hours.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.2
+  },
+  {
+    "id": 7,
+    "title": "Glitter Top Coat Nail Polish",
+    "price": 179,
+    "description": "Add a dazzling sparkle to any base color with this fast-drying glitter top coat.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.1
+  },
+  {
+    "id": 8,
+    "title": "9-Color Eyeshadow Palette - Warm Nudes",
+    "price": 899,
+    "description": "A mix of matte and shimmer shades perfect for creating everyday or glamorous eye looks.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.6
+  },
+  {
+    "id": 9,
+    "title": "Ultra Glossy Lip Gloss - Crystal Clear",
+    "price": 349,
+    "description": "Non-sticky formula delivering extreme shine and plumping effect with a vanilla scent.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.4
+  },
+  {
+    "id": 10,
+    "title": "Micellar Cleansing Water - 200ml",
+    "price": 299,
+    "description": "Gently removes waterproof makeup, dirt, and oil without drying out the skin.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.5
+  },
+  {
+    "id": 11,
+    "title": "Metallic Nail Paint - Rose Gold",
+    "price": 220,
+    "description": "Stunning metallic finish nail enamel that drys smoothly without leaving streaks.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.3
+  },
+  {
+    "id": 12,
+    "title": "Longwear Compact Powder - Natural Skin",
+    "price": 450,
+    "description": "Controls excess oil and sweat for up to 12 hours while giving a fresh, matte finish.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1617220828711-b31b7941785f?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.4
+  },
+  {
+    "id": 13,
+    "title": "Liquid Concealer - Medium Honey",
+    "price": 549,
+    "description": "Hides dark circles, blemishes, and dark spots effortlessly with a soft matte brush.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1599733589046-10c005739ef9?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.2
+  },
+  {
+    "id": 14,
+    "title": "Volumizing Fiber Mascara - Deep Black",
+    "price": 649,
+    "description": "Instantly lifts and lengthens your eyelashes without clumping or flaking off.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1631730359575-38e4755d772b?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.7
+  },
+  {
+    "id": 15,
+    "title": "Nail Polish Remover Wipes - Lemon Fresh",
+    "price": 120,
+    "description": "Acetone-free wipes packed with natural oils to clean nail polish while hydrating cuticles.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1590656214869-155521e78a30?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.5
+  },
+  {
+    "id": 16,
+    "title": "Crayon Creamy Lipstick - Pink Plum",
+    "price": 325,
+    "description": "Easy-to-use crayon design that glides like butter with a bright satin texture.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.3
+  },
+  {
+    "id": 17,
+    "title": "Natural Blush Palette - Rose & Coral",
+    "price": 599,
+    "description": "Highly blendable powder blush that gives your cheeks a natural, healthy glow.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1631248055158-edec7a3c072b?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.6
+  },
+  {
+    "id": 18,
+    "title": "HD Face Primer - Pore Minimizing",
+    "price": 699,
+    "description": "Creates a smooth canvas by filling pores and locks your makeup in place all day long.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1608248597481-496100c80836?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.4
+  },
+  {
+    "id": 19,
+    "title": "Illuminating Highlighter - Champagne Gold",
+    "price": 499,
+    "description": "Liquid shimmer highlighter that reflects light beautifully on high points of the face.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1515688594390-b649af70d282?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.5
+  },
+  {
+    "id": 20,
+    "title": "Matte Nail Lacquer - Midnight Black",
+    "price": 260,
+    "description": "Pure premium deep black shade with a luxurious ultra-matte velvet finish.",
+    "category": "cosmetics",
+    "image": "https://images.unsplash.com/photo-1607606322813-f5f5906f0e42?w=500&auto=format&fit=crop&q=60",
+    "rating": 4.4
+  }
+]
