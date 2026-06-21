@@ -17,11 +17,10 @@ export default function Home() {
   const featuredProducts = productsData.slice(0, 6);
 
   return (
-    <div className={`${isDark ? 'text-white' : 'text-dark'} min-vh-100 mb-5`}>     
-     
-      <div className={`p-5 rounded-4 mb-5 shadow-sm text-center text-md-start ${
-        isDark ? 'bg-dark border border-secondary border-opacity-25' : 'bg-light'
-      }`}>
+    <div className={`${isDark ? 'text-white' : 'text-dark'} min-vh-100 mb-5`}>
+
+      <div className={`p-5 rounded-4 mb-5 shadow-sm text-center text-md-start ${isDark ? 'bg-dark border border-secondary border-opacity-25' : 'bg-light'
+        }`}>
         <Row className="align-items-center gy-4">
           <Col md={8}>
             <h1 className="display-4 fw-bold mb-3">
@@ -46,7 +45,7 @@ export default function Home() {
           <span>Featured Products</span>
           <Link to="/products" className="text-warning text-decoration-none fs-6">View All</Link>
         </h4>
-        
+
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={20}
@@ -61,16 +60,49 @@ export default function Home() {
         >
           {featuredProducts.map((product: any) => (
             <SwiperSlide key={product.id}>
-              <div className={`p-4 rounded border shadow-sm h-100 d-flex flex-column justify-content-between ${
-                isDark ? 'bg-dark border-secondary' : 'bg-light border-light'
-              }`}>
-                <div>
-                  <h5 className="fw-semibold mb-2 text-truncate">{product.title}</h5>
-                  <p className={`fw-bold mb-3 ${isDark ? 'text-warning' : 'text-primary'}`}>Rs. {product.price}</p>
+              <div
+                className={`card h-100 border rounded-4 shadow-sm overflow-hidden d-flex flex-column justify-content-between ${isDark ? 'bg-dark border-secondary text-white' : 'bg-white border-light text-dark'}`}>
+                <div className="position-relative overflow-hidden bg-white d-flex align-items-center justify-content-center" style={{ height: '240px' }}>
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="img-fluid h-100 w-100 object-fit-cover"
+                    style={{ transition: 'transform 0.4s ease' }}
+                    onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+                    onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&auto=format&fit=crop&q=60";
+                    }}
+                  />
                 </div>
-                <Button variant="outline-warning" size="sm" className="w-100 fw-semibold mt-2" onClick={() => addToCart(product)}>
-                  Add to Cart
-                </Button>
+
+                <div className="p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                  <div>
+                    <h6 className="fw-bold mb-1 text-truncate" title={product.title}>
+                      {product.title}
+                    </h6>
+                    <p className={`small mb-3 text-truncate ${isDark ? 'text-white-50' : 'text-muted'}`} style={{ fontSize: '0.8rem' }}>
+                      {product.description || 'Premium quality beauty essence.'}
+                    </p>
+                  </div>
+
+                  <div className="mt-2">
+                    <div className="d-flex justify-content-between align-items-center mb-3">
+                      <span className="fs-5 fw-bold text-warning">Rs. {product.price}</span>
+                      <span className="text-success small fw-semibold">In Stock</span>
+                    </div>
+
+                    <Button
+                      variant={isDark ? "outline-warning" : "warning"}
+                      className={`w-100 fw-bold d-flex align-items-center justify-content-center gap-2 py-2 rounded-3 ${!isDark && 'text-dark'}`}
+                      onClick={() => addToCart(product)}
+                    >
+                      <span>Add to Cart</span>
+                    </Button>
+                  </div>
+                </div>
+
               </div>
             </SwiperSlide>
           ))}

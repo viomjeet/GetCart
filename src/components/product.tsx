@@ -102,6 +102,10 @@ export default function Product() {
                       style={{ transition: 'transform 0.3s ease' }}
                       onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.06)')}
                       onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&auto=format&fit=crop&q=60";
+                      }}
                     />
                     <Badge
                       bg="warning"
