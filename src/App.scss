@@ -2,16 +2,107 @@
   --bg-color: #ffffff;
   --text-color: #212529;
   --card-bg: #f8f9fa;
+  --main-font: "Roboto", sans-serif;
 }
 
-[data-theme='dark'] {
+.fw-100 {
+  font-width: 100;
+}
+
+.fw-200 {
+  font-width: 200;
+}
+
+.fw-300 {
+  font-width: 300;
+}
+
+.fw-400 {
+  font-width: 400;
+}
+
+.fw-500 {
+  font-width: 500;
+}
+
+.fw-600 {
+  font-width: 600;
+}
+
+.fw-700 {
+  font-width: 700;
+}
+
+.fw-800 {
+  font-width: 800;
+}
+
+.fw-900 {
+  font-width: 900;
+}
+
+[data-theme="dark"] {
   --bg-color: #121212;
   --text-color: #f8f9fa;
   --card-bg: #1e1e1e;
 }
 
 body {
+  font-family: var(--main-font);
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+button,
+input,
+select,
+textarea {
+  font-family: var(--main-font) !important;
+}
+
+.swal2-container {
+  .swal2-popup {
+    .swal2-title {
+      padding: 10px !important;
+      font-family: var(--main-font) !important;
+      font-weight: 500 !important;
+      font-size: 20px !important;
+      text-align: left !important;
+      margin: 0px !important;
+    }
+
+    .swal2-html-container {
+      padding: 10px !important;
+      font-family: var(--main-font) !important;
+      font-weight: 300 !important;
+      font-size: 14px !important;
+      text-align: left !important;
+    }
+
+    .swal2-actions {
+      display: block !important;
+      text-align: right !important;
+      width: 100%;
+      padding: 10px;
+
+      &>.btn {
+        padding: 2px 20px !important;
+      }
+    }
+  }
 }

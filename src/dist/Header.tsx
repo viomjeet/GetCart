@@ -3,18 +3,18 @@ import { Link, useLocation, Routes, Route } from 'react-router-dom';
 import Home from '../components/Home';
 import Product from '../components/product';
 import Cart from '../components/cartItems';
-
 import { useTheme } from './ThemeContext';
 import { FiSun, FiMoon } from 'react-icons/fi';
-
 import { useCart } from './CartContext';
 import Checkout from '../components/Checkout';
+import { Toaster } from 'react-hot-toast';
 
 export default function Header() {
   const { getCartCount } = useCart();
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
   const isDark = (theme === 'dark');
+
   const setactive = (path: string) => {
     return location.pathname === path ? "text-warning" : (isDark ? "text-white-50" : "text-dark-50");
   };
@@ -24,22 +24,26 @@ export default function Header() {
 
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} containerStyle={{ top: 20, zIndex: 99 }} />
       <Navbar
         expand="lg"
         className="mb-4 shadow-sm px-3 py-2 bg-color text-color"
         bg={isDark ? 'dark' : 'light'}
         variant={isDark ? 'dark' : 'light'}
+        
       >
         <Container>
           <Navbar.Brand as={Link} to="/" className="fw-bold text-uppercase text-warning">
             GetCart
           </Navbar.Brand>
+
           <div className="d-flex align-items-center order-lg-last gap-1">
             <button className={`btn btn-link p-2 border-0 shadow-none ${isDark ? 'text-white-50' : 'text-dark-50'}`} onClick={toggleTheme}>
               {isDark ? <SunIcon size={20} className="text-warning" /> : <MoonIcon size={20} />}
             </button>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           </div>
+
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto mt-2 mt-lg-0 align-items-start align-items-lg-center w-100 justify-content-lg-end">
               <Nav.Link as={Link} to="/" className={`${setactive('/')} ps-0 pe-3 py-2`}>Home</Nav.Link>
@@ -54,15 +58,16 @@ export default function Header() {
                   )}
                 </span>
               </Nav.Link>
+
               <NavDropdown
                 title={
-                  <span className={`d-inline-flex align-items-center gap-2 text-nowrap bg-text`}>
+                  <span className="d-inline-flex align-items-center gap-2 text-nowrap">
                     <span>Account</span>
                   </span>
                 }
                 id="collasible-nav-dropdown"
-                className={`ps-0 py-2   ${isDark ? 'text-white-50' : 'text-dark-50'}`}
-                align="start"
+                className={`d-none ps-0 py-2 ${isDark ? 'text-white-50' : 'text-dark-50'}`}
+                align="end"
               >
                 <NavDropdown.Item as={Link} to="/profile" className="d-flex align-items-center gap-2 py-2">
                   My Profile
@@ -89,7 +94,7 @@ export default function Header() {
           <Route path="/products" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+          <Route path="*" element={<h1 className="text-center mt-5">404 - Page Not Found</h1>} />
         </Routes>
       </div>
     </>

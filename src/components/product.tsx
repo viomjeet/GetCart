@@ -25,6 +25,10 @@ export default function Product() {
     return matchesSearch && matchesRating;
   });
 
+  const handleAddToCart = (product: any) => {
+    addToCart(product);
+  };
+
   return (
     <div className={`container-fluid px-lg-5 mt-4 pb-5 ${isDark ? 'text-white' : 'text-dark'}`}>
       <Row className="g-4">
@@ -93,7 +97,6 @@ export default function Product() {
                 <div className={`card h-100 border rounded-4 shadow-sm overflow-hidden d-flex flex-column justify-content-between ${isDark ? 'bg-dark border-secondary text-white' : 'bg-white border-light text-dark'
                   }`}>
 
-                  {/* Top: Image Section with Rating Overlay Badge */}
                   <div className="position-relative overflow-hidden bg-white d-flex align-items-center justify-content-center" style={{ height: '220px' }}>
                     <img
                       src={product.image}
@@ -135,7 +138,7 @@ export default function Product() {
                       <Button
                         variant={isDark ? "outline-warning" : "warning"}
                         className={`w-100 fw-bold d-flex align-items-center justify-content-center gap-2 py-2 rounded-3 ${!isDark && 'text-dark'}`}
-                        onClick={() => addToCart(product)}
+                        onClick={() => handleAddToCart(product)}
                       >
                         <BagIcon size={16} />
                         <span>Add to Cart</span>

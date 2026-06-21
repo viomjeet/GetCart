@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-
+import { toast } from 'react-hot-toast';
 interface Product { id: number; title: string; price: number; image: string; }
 interface CartItem extends Product { quantity: number; }
 
@@ -23,12 +23,14 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
         );
       }
-      return [...prevItems, { ...product, quantity: 1 }];
+      return [...prevItems, { ...product, quantity: 1 }];      
     });
+    toast.success(`Item added to cart!`);
   };
 
   const delToCart = (id: number) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    toast.success(`Item deleted!`);
   };
 
   const getCartCount = () => {

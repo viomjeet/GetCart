@@ -3799,7 +3799,7 @@ cssstyle@^2.3.0:
   dependencies:
     cssom "~0.3.6"
 
-csstype@^3.0.2, csstype@^3.2.2:
+csstype@^3.0.2, csstype@^3.1.3, csstype@^3.2.2:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.2.3.tgz#ec48c0f3e993e50648c86da559e2610995cf989a"
   integrity sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==
@@ -5130,6 +5130,11 @@ globby@^11.0.4, globby@^11.1.0:
     ignore "^5.2.0"
     merge2 "^1.4.1"
     slash "^3.0.0"
+
+goober@^2.1.16:
+  version "2.1.19"
+  resolved "https://registry.yarnpkg.com/goober/-/goober-2.1.19.tgz#a4b4dcdbba9325b8c4d7380099f9f281f27c6a6f"
+  integrity sha512-U7veizMqxyKlM58+Z5j2ngJBH/r9siDmxpvNxSw0PylF6WQvrASJEZrxh1hidRBJc2jqoBVSyOban5u8m+6Rxg==
 
 gopd@^1.0.1, gopd@^1.2.0:
   version "1.2.0"
@@ -8003,6 +8008,14 @@ react-error-overlay@^6.0.11:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.1.0.tgz#22b86256beb1c5856f08a9a228adb8121dd985f2"
   integrity sha512-SN/U6Ytxf1QGkw/9ve5Y+NxBbZM6Ht95tuXNMKs8EJyFa/Vy/+Co3stop3KBHARfn/giv+Lj1uUnTfOJ3moFEQ==
 
+react-hot-toast@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-hot-toast/-/react-hot-toast-2.6.0.tgz#4ada6ed3c75c5e42a90d562f55665ff37ee1442b"
+  integrity sha512-bH+2EBMZ4sdyou/DPrfgIouFpcRLCJ+HoCA32UoAYHn6T3Ur5yfcDCeSr5mwldl6pFOsiocmrXMuoCJ1vV8bWg==
+  dependencies:
+    csstype "^3.1.3"
+    goober "^2.1.16"
+
 react-icons@^5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.6.0.tgz#27bcc4acbc836e762548d76041cf9b9fef4e3837"
@@ -9100,6 +9113,11 @@ svgo@^2.7.0:
     picocolors "^1.0.0"
     sax "^1.5.0"
     stable "^0.1.8"
+
+sweetalert2@^11.26.25:
+  version "11.26.25"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.26.25.tgz#ba24ffb79c67648ac51f834620baa15866a56e35"
+  integrity sha512-+hunCOJdJ6FLj04T9YSLvvZXRjsvIkTeTKP2e4VF8CaBias961BTnWiSFAy7F/CM5eq3QK2Rraoc5Gzftslvkg==
 
 swiper@^12.2.0:
   version "12.2.0"

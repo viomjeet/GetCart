@@ -5,6 +5,9 @@ import { Button } from 'react-bootstrap';
 import { FiTrash, FiCreditCard } from 'react-icons/fi';
 import { useNavigate, Link } from 'react-router-dom';
 
+// SweetAlert2 इम्पोर्ट किया
+import Swal from 'sweetalert2';
+
 const DeleteIcon = FiTrash as any;
 const CardIcon = FiCreditCard as any;
 
@@ -17,6 +20,29 @@ export default function CartItems() {
     // Calculate dynamic order summary totals
     const totalItems = (cartItems || []).reduce((acc: number, item: any) => acc + (item.quantity || 1), 0);
     const totalPrice = (cartItems || []).reduce((acc: number, item: any) => acc + (item.price * (item.quantity || 1)), 0);
+
+    // SIMPLE AND CLEAN SWEETALERT LOGIC
+    const handleDeleteWithAlert = (id: number) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "Do you want to remove this item from the cart?",
+            showCancelButton: true,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            customClass: {
+                popup: `p-1 small border ${isDark ? 'bg-dark text-white border-secondary' : 'bg-white text-dark border-light'}`,
+                title: `fw-bold mb-2 custom-swal-title`,
+                htmlContainer: 'text-left ',
+                confirmButton: 'btn p-1 btn-danger small',
+                cancelButton: `btn ${isDark ? 'btn-outline-secondary' : 'btn-light border'} small`
+            }
+
+        }).then((result) => {
+            if (result.isConfirmed) {
+                delToCart(id);
+            }
+        });
+    };
 
     return (
         <div className={`container min-vh-100 mt-4 pb-5 ${isDark ? 'text-white' : 'text-dark'}`}>
@@ -31,7 +57,7 @@ export default function CartItems() {
                                 <div className={`${isDark ? 'bg-dark text-white border-secondary' : 'bg-light text-dark border-light'
                                     } p-3 rounded shadow-sm border d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3`}>
 
-                                    {/* 1. PRODUCT IMAGE ADDED HERE */}
+                                    {/* PRODUCT IMAGE */}
                                     <div className="rounded overflow-hidden bg-white d-flex align-items-center justify-content-center flex-shrink-0"
                                         style={{ width: '80px', height: '80px' }}>
                                         <img
@@ -45,7 +71,7 @@ export default function CartItems() {
                                         />
                                     </div>
 
-                                    {/* 2. PRODUCT DETAILS */}
+                                    {/* PRODUCT DETAILS */}
                                     <div className="flex-grow-1">
                                         <h5 className="fw-semibold mb-1 fs-6 text-truncate" style={{ maxWidth: '320px' }}>
                                             {product.title}
@@ -67,15 +93,15 @@ export default function CartItems() {
                                         </div>
                                     </div>
 
+                                    {/* DELETE TRIGGER ACTION */}
                                     <div className="ms-sm-auto flex-shrink-0">
                                         <Button
-                                            variant="danger"
+                                            variant={isDark ? 'dark' : 'light'}
                                             size="sm"
-                                            className='d-inline-flex align-items-center gap-2 px-3 py-1.5 fw-semibold'
-                                            onClick={() => delToCart(product.id)}
+                                            className='d-inline-flex align-items-center p-2 fw-semibold'
+                                            onClick={() => handleDeleteWithAlert(product.id)}
                                         >
                                             <DeleteIcon size={14} />
-                                            <span>Delete</span>
                                         </Button>
                                     </div>
 
@@ -85,14 +111,14 @@ export default function CartItems() {
                     </div>
                 </div>
 
-                {/* Right Side: Theme-aware Dynamic Checkout Panel summary card */}
+                {/* Right Side: Order Summary Card */}
                 {cartItems.length > 0 && (
                     <div className="col-lg-4 mb-3">
                         <div className={`p-4 rounded shadow-sm border ${isDark ? 'bg-dark border-secondary text-white' : 'bg-light border-light text-dark'
                             }`}>
                             <h5 className="fw-bold mb-3 border-bottom pb-2 border-opacity-25">Order Summary</h5>
 
-                            <div className="d-flex justify-content-between mb-2">
+                            <div className="d-flex justify-content-between align-items-center mb-2">
                                 <span className={isDark ? 'text-white-50' : 'text-muted'}>Total Items:</span>
                                 <span className="fw-semibold">{totalItems}</span>
                             </div>
@@ -114,11 +140,13 @@ export default function CartItems() {
                     </div>
                 )}
 
+                {/* Empty Cart State */}
                 {cartItems.length === 0 && (
                     <div className="col-12 mt-4 text-center">
                         <div className={`p-5 rounded-4 border shadow-sm d-flex flex-column align-items-center justify-content-center ${isDark ? 'bg-dark border-secondary text-white' : 'bg-light border-light text-dark'
                             }`}>
                             <div className="display-1 mb-3">🛒</div>
+
                             <h4 className="fw-bold mb-2">Your Cart is Empty!</h4>
                             <p className={`mb-4 max-width-350 fs-6 ${isDark ? 'text-white-50' : 'text-muted'}`}>
                                 Looks like you haven't added anything to your beauty cart yet. Explore our premium cosmetics to get started!
